@@ -1,17 +1,19 @@
 <template>
   <div class="m-0 p-0">
-    <div class="filters">
-      <label>Rating:</label>
-      <input type="number" v-model="ratingFilter" min="0" max="5">
+
+    <div class="filters header py-2">
+      <label>Rating:</label> 
+      <input class="rounded px-2 " type="number" v-model="ratingFilter"  min="0" max="5"> &nbsp;
       <label>Price:</label>
-      <input type="number" v-model="priceFilter" min="0">
+      <input  class="rounded px-2 " type="number" v-model="priceFilter" min="0"> &nbsp;
       <label>Name:</label>
-      <input type="text" v-model="nameFilter">
+      <input  class="rounded px-2 " type="text" v-model="nameFilter">
     </div>
 
     <table class="table table-bordered">
       <thead>
         <tr>
+          <th>Serial</th>
           <th>Title</th>
           <th>Price</th>
           <th>Rating</th>
@@ -50,7 +52,7 @@ export default {
     return {
       products: [],
       currentPage: 1,
-      itemsPerPage: 5,
+      itemsPerPage: 10,
       selectedProductDetails: null,
       ratingFilter: null,
       priceFilter: null,

@@ -1,10 +1,17 @@
 <template>
   <tr>
+    <td>{{ product.id }}</td>
     <td>{{ product.title }}</td>
     <td>{{ product.price }}</td>
     <td>{{ product.rating }}</td>
     <td>
-      <button @click="toggleDetailsView">
+      <button
+        :class="{
+          'btn btn-success': !product.showDetails,
+          'btn btn-danger': product.showDetails
+        }"
+        @click="toggleDetailsView"
+      >
         {{ product.showDetails ? 'Close' : 'Show' }}
       </button>
     </td>
@@ -29,7 +36,7 @@ export default {
   components: {
     DetailsView
   },
-  emits: ['show-details'], // Declare the custom event here
+  emits: ['show-details'],
   methods: {
     toggleDetailsView() {
       this.$emit('show-details', this.product.id);
