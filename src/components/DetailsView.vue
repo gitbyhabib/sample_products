@@ -5,7 +5,7 @@
         <p>Price: {{ productDetails.price }}</p>
         <p>Rating: {{ productDetails.rating }}</p>
         <p>Description: {{ productDetails.description }}</p>
-        <!-- Add more details as needed -->
+      
     </div>
 </template>
 

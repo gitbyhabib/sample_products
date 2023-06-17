@@ -2,6 +2,8 @@
   <div class="m-0 p-0">
 
     <div class="filters header py-2">
+
+      <h1 class="text center">Filter data by search</h1>
       <label>Rating:</label> 
       <input class="rounded px-2 " type="number" v-model="ratingFilter"  min="0" max="5"> &nbsp;
       <label>Price:</label>
